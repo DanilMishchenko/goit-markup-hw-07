@@ -1,0 +1,107 @@
+.fooder {
+  background-color: $main-dark-gray-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 252;
+}
+
+.fooder .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.fooder-logo {
+  display: inline-flex;
+  margin-bottom: 20px;
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.fooder-logo .studio {
+  color: $main-color;
+}
+
+.contacts-fooder li {
+  margin-top: 9px;
+}
+
+.fooder .addres {
+  color: $main-color;
+  width: 231px;
+}
+
+.contacts-fooder a {
+  color: $footer-contacts-text-color;
+  transition: 250ms $time-function;
+}
+
+.fooder .info {
+  margin-right: 70px;
+}
+
+.fooder .social-icon {
+  display: flex;
+}
+
+.fooder .fooder-social {
+  width: 206px;
+  margin-left: 0;
+  margin-right: 93px;
+}
+
+.fooder .fooder-social p,
+.fooder .subscription p {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-color;
+}
+
+.subscription .subscription-form {
+  display: flex;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: transparent;
+  color: $main-color;
+  background-color: transparent;
+}
+
+.subscribe-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  outline: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $main-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
+}

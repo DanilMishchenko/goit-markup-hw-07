@@ -1,0 +1,38 @@
+.section-title.hidden {
+  display: none;
+}
+
+.features.section {
+  padding-bottom: 0px;
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-list div {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: $main-light-gray-color;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-list h3 {
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.features-list li {
+  width: calc((100% - 90px) / 4);
+}
+
+.features-list li:not(:last-child) {
+  margin-right: 30px;
+}
