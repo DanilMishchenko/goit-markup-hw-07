@@ -1,32 +1,32 @@
 .client-list {
   display: flex;
-}
 
-.client-list li:not(:last-child) {
-  margin-right: 30px;
-}
+  & li:not(:last-child) {
+    margin-right: 30px;
+  }
 
-.client-list li {
-  display: flex;
-  width: calc((100% - 150px) / 6);
-}
+  & li {
+    display: flex;
+    width: calc((100% - 150px) / 6);
+  }
 
-.client-list a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 100%;
-  height: 90px;
+    width: 100%;
+    height: 90px;
 
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  transition: 250ms $time-function;
-}
+    fill: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: 250ms $time-function;
+  }
 
-.client-list a:hover,
-.client-list a:focus {
-  fill: $accent-color;
-  border: 1px solid $accent-color;
+  & a:hover,
+  & a:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
 }

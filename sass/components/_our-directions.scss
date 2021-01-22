@@ -1,13 +1,13 @@
 .directions-list {
   display: flex;
-}
 
-.directions-list li {
-  position: relative;
-}
+  & li {
+    position: relative;
+  }
 
-.directions-list li:not(:last-child) {
-  margin-right: 30px;
+  & li:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .direction-overlay {

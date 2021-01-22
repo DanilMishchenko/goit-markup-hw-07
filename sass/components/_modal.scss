@@ -13,14 +13,13 @@
 
 .backdrop.is-hidden {
   pointer-events: none;
-
   opacity: 0;
-}
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  transition: transform 250ms ($time-function, opacity 500ms $time-function);
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: transform 250ms ($time-function, opacity 500ms $time-function);
+  }
 }
 
 .modal {
@@ -37,24 +36,24 @@
   background-color: $main-color;
   opacity: 1;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
-.modal .close-button {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  & .close-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 
-  fill: #000000;
-  background-color: $main-color;
-  border: 1px solid $modal-close-button-border-color;
-  transition: fill 250ms $time-function;
+    fill: #000000;
+    background-color: $main-color;
+    border: 1px solid $modal-close-button-border-color;
+    transition: fill 250ms $time-function;
+  }
 }
 
 .modal-title {
@@ -73,12 +72,25 @@
   margin-bottom: 20px;
   text-align: left;
   height: 342px;
+
+  & .modal-input:hover,
+  & .modal-input:focus,
+  & .modal-input:focus-within,
+  & .modal-textarea:hover,
+  & .modal-textarea:focus {
+    border: 1px solid $accent-color;
+    outline: 0;
+  }
 }
 
 .modal-label {
   position: relative;
   margin-bottom: 10px;
   color: $primary-text-color;
+
+  & .modal-textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .modal-field {
@@ -101,23 +113,14 @@
   transition: color 250ms ($time-function, border 250ms $time-function);
 }
 
-.modal-label .modal-input {
+.modal-input {
   height: 40px;
   padding: 12px 16px 12px 42px;
-}
 
-.modal-input:hover + .modal-icon,
-.modal input:focus + .modal-icon {
-  fill: $accent-color;
-}
-
-.modal-form .modal-input:hover,
-.modal-form .modal-input:focus,
-.modal-form .modal-input:focus-within,
-.modal-form .modal-textarea:hover,
-.modal-form .modal-textarea:focus {
-  border: 1px solid $accent-color;
-  outline: 0;
+  &:hover + .modal-icon,
+  &:focus + .modal-icon {
+    fill: $accent-color;
+  }
 }
 
 .modal-label .modal-icon {
@@ -133,10 +136,6 @@
   resize: none;
 }
 
-.modal-textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -146,6 +145,21 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.modal-checkbox {
+  margin-bottom: 30px;
+
+  & input:checked + .icon-checkbox {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    fill: $main-color;
+  }
+
+  & .visually-hidden:checked + .icon-checkbox {
+    background-origin: border-box;
+    background-color: $accent-color;
+  }
 }
 
 .modal-checkbox .icon-checkbox {
@@ -164,16 +178,7 @@
     ($time-function, background-color 250ms $time-function, fill 250ms $time-function, box-shadow 250ms $time-function);
 }
 
-.modal-checkbox .visually-hidden:checked + .icon-checkbox {
-  background-origin: border-box;
-  background-color: $accent-color;
-}
-
-.modal .modal-checkbox {
-  margin-bottom: 30px;
-}
-
-.modal .modal-checkbox label {
+.modal-checkbox label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,12 +188,6 @@
   color: $accent-color;
   text-decoration: underline;
   margin-left: 7px;
-}
-
-.modal .modal-checkbox input:checked + .icon-checkbox {
-  border-color: $accent-color;
-  background-color: $accent-color;
-  fill: $main-color;
 }
 
 .submit-button {
